@@ -23,4 +23,6 @@ public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 		return hotel;
 	}
 
+	
+	
 }

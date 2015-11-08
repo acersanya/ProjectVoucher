@@ -9,7 +9,7 @@ public abstract class TravelVoucher  {
 	private static final String CHECKPRICE = "Tour price can't be bellow zero";
 
 	private enum TransportType {
-		AIRPLANE, BUS, SHIP, TRAIN
+		AIRPLANE, BUS, SHIP, TRAIN, CAR
 	}
 
 	private enum NutritionType {
@@ -39,8 +39,8 @@ public abstract class TravelVoucher  {
 
 	}
 
-	public NutritionType getNutritionType() {
-		return nutritionType;
+	public String getNutritionType() {
+		return nutritionType.toString();
 	}
 
 	public void setNutritionType(String nutritionType) {
@@ -51,8 +51,8 @@ public abstract class TravelVoucher  {
 		}
 	}
 
-	public TransportType getTransportType() {
-		return transportType;
+	public String getTransportType() {
+			return transportType.toString();
 	}
 
 	public void setTransportType(String transportType) {

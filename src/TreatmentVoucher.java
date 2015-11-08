@@ -19,6 +19,7 @@ public class TreatmentVoucher extends TravelVoucher implements Hotelable {
 		return disease;
 	}
 
+	
 	public void setDisease(String disease) {
 		for (DISEASE type : DISEASE.values()) {
 			if (disease.equalsIgnoreCase(type.name())) {
