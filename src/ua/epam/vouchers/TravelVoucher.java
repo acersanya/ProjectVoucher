@@ -14,6 +14,7 @@ public abstract class TravelVoucher  {
 		AIRPLANE, BUS, SHIP, TRAIN, CAR
 	}
 
+	//you're able to choose nutrition  
 	private enum NutritionType {
 		BREAKFAST, DINNER, SUPPER, NO_MEAL, ALL_PROVIDED
 	}
@@ -41,10 +42,18 @@ public abstract class TravelVoucher  {
 
 	}
 
+	/**
+	 * Getter for Nutrition
+	 * @return nutrition type
+	 */
 	public String getNutritionType() {
 		return nutritionType.toString();
 	}
 
+	/**
+	 * Setter for nutrition
+	 * @param nutritionType
+	 */
 	public void setNutritionType(String nutritionType) {
 		for (NutritionType type : NutritionType.values()) {
 			if (nutritionType.equalsIgnoreCase(type.name())) {
@@ -53,6 +62,10 @@ public abstract class TravelVoucher  {
 		}
 	}
 
+	/**
+	 * Getter
+	 * @return transport type
+	 */
 	public String getTransportType() {
 			return transportType.toString();
 	}
@@ -65,10 +78,18 @@ public abstract class TravelVoucher  {
 		}
 	}
 
+	/**
+	 * Getter
+	 * @return price
+	 */
 	public int getPrice() {
 		return price;
 	}
 
+	/**
+	 * Setter
+	 * @param price
+	 */
 	public void setPrice(int price) {
 		if (price < 0) {
 			throw new IllegalArgumentException(CHECKPRICE);
@@ -76,46 +97,89 @@ public abstract class TravelVoucher  {
 		this.price = price;
 	}
 
+	/**
+	 * Getter
+	 * @return departure Date
+	 */
 	public Date getDepartureDate() {
 		return departureDate;
 	}
 
+	/**
+	 * Setter
+	 * Date is set by user in  String format, 
+	 * than it is converted into DAte by DateUtil class
+	 * @param departureDate
+	 */
 	public void setDepartureDate(String departureDate) {
 		this.departureDate = DateUtil.convertToDate(departureDate);
 	}
 
+	/**
+	 * Getter
+	 * @return Date
+	 */
 	public Date getReturnDate() {
 		return returnDate;
 	}
 
+	/**
+	 * Setter
+	 * @param returnDate
+	 */
 	public void setReturnDate(String returnDate) {
 		this.returnDate = DateUtil.convertToDate(returnDate);
 	}
 
+	/**
+	 * Getter
+	 * @return name of home place
+	 */
 	public String getLeavingFrom() {
 		return leavingFrom;
 	}
 
+	/**
+	 * Setter
+	 * @param leavingFrom 
+	 */
 	public void setLeavingFrom(String leavingFrom) {
 		if (leavingFrom != null) {
 			this.leavingFrom = leavingFrom;
 		}
 	}
 
+	/**
+	 * Getter
+	 * @return name of resort place
+	 */
 	public String getGoingTo() {
 		return goingTo;
 	}
 
+	/**
+	 * Setter
+	 * @param goingTo
+	 */
 	public void setGoingTo(String goingTo) {
 		if (goingTo != null) {
 			this.goingTo = goingTo;
 		}
 	}
+	
 
+	/**
+	 * Getter
+	 * @return days 
+	 */
 	public int getDays() {
 		return days;
 	}
 
+	/**
+	 * Setter
+	 * @param days
+	 */
 	public void setDays(int days) {
 		if (days <= 0) {
 			throw new IllegalArgumentException(CHECKDAYS);

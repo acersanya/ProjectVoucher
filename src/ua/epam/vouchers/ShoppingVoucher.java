@@ -27,6 +27,9 @@ public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 	}
 
 	
+	/**
+	 * Getter
+	 */
 	@Override
 	public HotelTypes getHotelType() {
 		return hotel;

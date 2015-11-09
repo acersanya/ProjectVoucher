@@ -32,7 +32,6 @@ public class VoucherBase implements Filter {
 
 	/**
 	 * Getter
-	 * 
 	 * @return list of available vouchers
 	 */
 	public List<TravelVoucher> getVouchers() {
@@ -41,9 +40,7 @@ public class VoucherBase implements Filter {
 
 	/**
 	 * Setter
-	 * 
-	 * @param voucher
-	 *            add to the list
+	 * @param voucher add to the list
 	 */
 	public void addVouchers(TravelVoucher voucher) {
 		this.vouchers.add(voucher);
