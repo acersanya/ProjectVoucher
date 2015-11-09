@@ -1,12 +1,14 @@
-import java.util.ArrayList;
-import java.util.Comparator;
+package ua.epam.vouchers;
+
 import java.util.Date;
 
+import ua.epam.additionally.DateUtil;
 
 
 public abstract class TravelVoucher  {
 
 	private static final String CHECKPRICE = "Tour price can't be bellow zero";
+	private static final String CHECKDAYS = "At least should be one day in your travel voucher!";
 
 	private enum TransportType {
 		AIRPLANE, BUS, SHIP, TRAIN, CAR
@@ -116,7 +118,7 @@ public abstract class TravelVoucher  {
 
 	public void setDays(int days) {
 		if (days <= 0) {
-			throw new IllegalArgumentException("At least should be one day in your travel voucher!");
+			throw new IllegalArgumentException(CHECKDAYS);
 		}
 		this.days = days;
 	}

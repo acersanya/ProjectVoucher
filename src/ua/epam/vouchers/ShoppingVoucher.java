@@ -1,6 +1,9 @@
+package ua.epam.vouchers;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+
+import ua.epam.projectone.interfac.Hotelable;
 
 public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 
@@ -14,10 +17,16 @@ public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 	}
 	
 	
+	/**
+	 * Setter
+	 * You may set here placed to visit (Mall,Shops,boutique)
+	 * @param shop
+	 */
 	public void settShoppingList(String shop){
 		shoppingPlaces.add(shop);
 	}
 
+	
 	@Override
 	public HotelTypes getHotelType() {
 		return hotel;

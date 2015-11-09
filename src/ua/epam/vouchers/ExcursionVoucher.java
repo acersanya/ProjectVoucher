@@ -1,5 +1,8 @@
+package ua.epam.vouchers;
 import java.util.ArrayList;
 import java.util.List;
+
+import ua.epam.projectone.interfac.Hotelable;
 
 public class ExcursionVoucher extends TravelVoucher implements Hotelable {
 
@@ -10,17 +13,28 @@ public class ExcursionVoucher extends TravelVoucher implements Hotelable {
 			int days, String transport, String nutrition) {
 		super(price, departureDate, returnDate, leavingFrom, goingTo, days, transport, nutrition);
 		ancientPlaces = new ArrayList<>();
-		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * 
+	 * @return list of ancient places set by administrator
+	 */
 	public List<String> getAncientPlaces() {
 		return ancientPlaces;
 	}
-
-	public void setAncientPlace(String castle) {
-		ancientPlaces.add(castle);
+	
+	/**
+	 * This is excursion voucher, so you may
+	 * set ancient places for visiting
+	 * @param ancient place
+	 */
+	public void setAncientPlace(String ancient) {
+		ancientPlaces.add(ancient);
 	}
-
+	
+	/**
+	 * return hotel
+	 */
 	@Override
 	public HotelTypes getHotelType() {
 		return type;

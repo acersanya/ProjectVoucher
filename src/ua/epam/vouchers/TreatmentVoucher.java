@@ -1,3 +1,5 @@
+package ua.epam.vouchers;
+import ua.epam.projectone.interfac.Hotelable;
 
 public class TreatmentVoucher extends TravelVoucher implements Hotelable {
 
@@ -12,14 +14,21 @@ public class TreatmentVoucher extends TravelVoucher implements Hotelable {
 	public TreatmentVoucher(int price, String departureDate, String returnDate, String leavingFrom, String goingTo,
 			int days, String transport, String nutrition) {
 		super(price, departureDate, returnDate, leavingFrom, goingTo, days, transport, nutrition);
-		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * Getter for disease
+	 * @return disease
+	 */
 	public DISEASE getDisease() {
 		return disease;
 	}
 
-	
+	/**
+	 * This is Treatment Voucher so people are placed here according
+	 * to their diagnosis. You may put  any available diagnose from enum 
+	 * @param disease
+	 */
 	public void setDisease(String disease) {
 		for (DISEASE type : DISEASE.values()) {
 			if (disease.equalsIgnoreCase(type.name())) {
@@ -28,6 +37,9 @@ public class TreatmentVoucher extends TravelVoucher implements Hotelable {
 		}
 	}
 
+	/**
+	 * implemented method from Hotelable interface
+	 */
 	@Override
 	public HotelTypes getHotelType() {
 		return hotel;

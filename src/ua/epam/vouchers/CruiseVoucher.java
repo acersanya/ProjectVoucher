@@ -1,3 +1,4 @@
+package ua.epam.vouchers;
 import java.util.List;
 
 public class CruiseVoucher extends TravelVoucher {

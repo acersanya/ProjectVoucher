@@ -1,3 +1,4 @@
+package ua.epam.additionally;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,6 +19,11 @@ public class DateUtil {
 		}
 	};
 
+	/**
+	 * Used for converting String format to Date
+	 * @param input String Date
+	 * @return Date
+	 */
 	public static Date convertToDate(String input) {
 		Date date = null;
 		if (null == input) {
