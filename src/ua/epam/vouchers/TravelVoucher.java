@@ -55,10 +55,15 @@ public abstract class TravelVoucher  {
 	 * @param nutritionType
 	 */
 	public void setNutritionType(String nutritionType) {
+		if(nutritionType != null){
 		for (NutritionType type : NutritionType.values()) {
 			if (nutritionType.equalsIgnoreCase(type.name())) {
 				this.nutritionType = type;
-			}
+				}
+			} 
+		}
+		else {
+			throw new NullPointerException();
 		}
 	}
 
@@ -112,7 +117,13 @@ public abstract class TravelVoucher  {
 	 * @param departureDate
 	 */
 	public void setDepartureDate(String departureDate) {
-		this.departureDate = DateUtil.convertToDate(departureDate);
+		if(departureDate !=null){
+			this.departureDate = DateUtil.convertToDate(departureDate);
+		 	}
+		else {
+			throw new NullPointerException();
+		}
+		
 	}
 
 	/**
@@ -128,7 +139,12 @@ public abstract class TravelVoucher  {
 	 * @param returnDate
 	 */
 	public void setReturnDate(String returnDate) {
-		this.returnDate = DateUtil.convertToDate(returnDate);
+		if (returnDate != null){
+			this.returnDate = DateUtil.convertToDate(returnDate);
+			}
+		else {
+			throw new NullPointerException();
+		}
 	}
 
 	/**
@@ -146,6 +162,9 @@ public abstract class TravelVoucher  {
 	public void setLeavingFrom(String leavingFrom) {
 		if (leavingFrom != null) {
 			this.leavingFrom = leavingFrom;
+		}
+		else {
+			throw new NullPointerException();
 		}
 	}
 

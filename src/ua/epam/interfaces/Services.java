@@ -1,4 +1,4 @@
-package ua.epam.projectone.interfac;
+package ua.epam.interfaces;
 
 public interface Services {
 

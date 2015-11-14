@@ -57,6 +57,7 @@ public class CruiseVoucher extends TravelVoucher {
 		for (CabinType type : CabinType.values()) {
 			if (cabinType.equalsIgnoreCase(type.name())) {
 				this.cabinType = type;
+				return;
 			}
 		} throw new IllegalArgumentException("CHECK ARGUMENT");
 	}
@@ -81,5 +82,14 @@ public class CruiseVoucher extends TravelVoucher {
 		}
 
 	}
+
+	@Override
+	public String toString() {
+		return "CruiseVoucher [countries=" + countries + ", cabinType=" + cabinType + ", linerType=" + linerType + "]";
+	}
+	
+	
+	
+	
 
 }

@@ -2,7 +2,7 @@ package ua.epam.vouchers;
 import java.util.ArrayList;
 import java.util.List;
 
-import ua.epam.projectone.interfac.Hotelable;
+import ua.epam.interfaces.Hotelable;
 
 public class ExcursionVoucher extends TravelVoucher implements Hotelable {
 
@@ -16,7 +16,7 @@ public class ExcursionVoucher extends TravelVoucher implements Hotelable {
 	}
 
 	/**
-	 * 
+	
 	 * @return list of ancient places set by administrator
 	 */
 	public List<String> getAncientPlaces() {

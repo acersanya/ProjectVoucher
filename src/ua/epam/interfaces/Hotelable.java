@@ -1,4 +1,4 @@
-package ua.epam.projectone.interfac;
+package ua.epam.interfaces;
 
 
 public interface Hotelable {
@@ -15,9 +15,8 @@ public interface Hotelable {
 	 * All classes which implement this class may set hotels from enum
 	 * @param hotelType one of types represented and HotelTypes
 	 * @return HotelType 
-	 * @throws IllegalArgumentException check the input validity
 	 */
-	default public HotelTypes setHotelType(String hotelType) throws IllegalArgumentException{
+	default public HotelTypes setHotelType(String hotelType) {
 		for (HotelTypes type : HotelTypes.values()) {
 			if (hotelType.equalsIgnoreCase(type.name())) {
 				return type;

@@ -1,5 +1,5 @@
 package ua.epam.vouchers;
-import ua.epam.projectone.interfac.Hotelable;
+import ua.epam.interfaces.Hotelable;
 
 public class TreatmentVoucher extends TravelVoucher implements Hotelable {
 

@@ -5,10 +5,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 public class DateUtil {
 
 	private static List<SimpleDateFormat> dateFormats = new ArrayList<SimpleDateFormat>() {
+		
 		{
 			add(new SimpleDateFormat("M/dd/yyyy"));
 			add(new SimpleDateFormat("dd.M.yyyy"));
@@ -42,5 +42,4 @@ public class DateUtil {
 
 		return date;
 	}
-
 }

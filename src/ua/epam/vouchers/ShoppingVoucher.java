@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import ua.epam.projectone.interfac.Hotelable;
+import ua.epam.interfaces.Hotelable;
 
 public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 
@@ -35,6 +35,4 @@ public class ShoppingVoucher  extends TravelVoucher implements Hotelable {
 		return hotel;
 	}
 
-	
-	
 }

@@ -1,8 +1,12 @@
 package ua.epam.additionally;
+import java.util.List;
+
 import ua.epam.vouchers.TravelVoucher;
 
-public class View {
 
+public class View {
+	public static final String DOTED_LINE ="--------------------------------------------------------";
+	
 	/**
 	 * Message Printer
 	 * @param t - message
@@ -12,11 +16,22 @@ public class View {
 	}
 	
 	/**
-	 * Print object attributes
-	 * @param t - object
+	 * Print voucher attributes
+	 * @param t - TravelVoucher
 	 */
 	public void printer(TravelVoucher t){
 		System.out.println(t);
 	}
-
+	
+	
+	/**
+	 * Print list of TravelVouchers 
+	 * @param list
+	 */
+	public void printList(List <TravelVoucher> list){
+		for(TravelVoucher i : list){
+			printer(i);
+		}
+	}
+	
 }
